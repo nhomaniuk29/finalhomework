@@ -1,0 +1,22 @@
+.service-one {
+  text-align: center;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 176px 180px 60px;
+    @include desktopHD {
+      padding: 176px 280px 60px;
+    }
+    @include tabletHD {
+      padding: 176px 60px 60px;
+    }
+    @include tabletSD {
+      padding: 280px 60px 60px;
+    }
+    @include mobile {
+      padding: 132px 30px 30px;
+    }
+  }
+}

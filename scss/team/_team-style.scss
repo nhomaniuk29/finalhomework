@@ -1,0 +1,187 @@
+.team-one {
+  &__body {
+    padding: 60px 180px;
+    @include desktopHD {
+      padding: 60px 280px;
+    }
+    @include tabletSD {
+      padding: 60px;
+    }
+    @include mobile {
+      padding: 30px;
+    }
+  }
+}
+.team-two {
+  &__body {
+    padding: 0px 60px 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 30.1%);
+    justify-content: space-between;
+    gap: 60px;
+    @include desktopHD {
+      padding: 0px 160px 60px;
+    }
+    @include tabletSD {
+      grid-template-columns: repeat(2, 45%);
+    }
+    @include mobile {
+      grid-template-columns: 100%;
+      gap: 30px;
+    }
+  }
+  &__card-link {
+    transition: 0.2s;
+    &:hover {
+      transform: scale(1.01);
+    }
+    &:hover .team-two__h4 {
+      color: $accent-regular;
+    }
+  }
+  &__card {
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      border-radius: 12px;
+      @include mobile {
+        height: 300px;
+      }
+    }
+  }
+  &__bottom-side {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0px 0px 0px;
+  }
+  &__h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-regular;
+    margin-bottom: 5px;
+    transition: 0.2s;
+    &:hover {
+    }
+  }
+  &__span {
+    font-size: 14px;
+    line-height: 22px;
+    color: $gray-text;
+  }
+  &__btn-more {
+    &:hover {
+      path {
+        stroke: #f0145a;
+      }
+    }
+  }
+}
+.team-entry {
+  &__body {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 113px 1fr;
+    grid-template-areas:
+      "img head"
+      "img text-block";
+    column-gap: 60px;
+    padding: 60px 180px;
+    @include desktopHD {
+      padding: 60px 280px;
+    }
+    @include tabletHD {
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 173px 1fr;
+      padding: 60px;
+    }
+    @include tabletSD {
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 405px 1fr;
+      grid-template-areas:
+        "img head"
+        "text-block text-block";
+      column-gap: 30px;
+    }
+    @include mobile {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__header {
+    grid-area: head;
+    @include tabletSD {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  &__img {
+    justify-self: end;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 12px;
+    grid-area: img;
+    @include tabletHD {
+      width: 300px;
+      height: 375px;
+    }
+    @include mobile {
+      width: 100%;
+      margin-bottom: 30px;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+  &__span {
+    font-size: 14px;
+    line-height: 22px;
+    color: $gray-text;
+  }
+  &__link-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0px 30px;
+    .separator {
+      @include tabletHD {
+        display: none;
+      }
+    }
+    a {
+      font-size: 16px;
+      line-height: 20px;
+      color: $active-regular;
+      &:hover {
+        color: $accent-regular;
+      }
+    }
+    @include tabletHD {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &__text-block {
+    grid-area: text-block;
+    padding-top: 30px;
+    border-top: 4px solid $gray-separator;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+  }
+  &__h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $main-regular;
+    margin: 30px 0px 15px;
+  }
+}

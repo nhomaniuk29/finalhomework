@@ -1,0 +1,102 @@
+.sec-one-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0px 371px;
+  height: 799px;
+  margin-bottom: 60px;
+  @include desktopHD {
+    height: 999px;
+  }
+  @include tabletHD {
+    height: 768px;
+  }
+  @include tabletSD {
+    height: 1024px;
+  }
+  @include mobile {
+    height: 600px;
+    padding: 0px;
+    margin-bottom: 30px;
+  }
+  .symbol-block {
+    position: relative;
+    &::before {
+      position: absolute;
+      display: block;
+      margin-top: 379px;
+      width: 100%;
+      content: "you legal solutions provider";
+      font-weight: 700;
+      font-size: 38px;
+      line-height: 46px;
+      text-align: center;
+      margin-top: 377px;
+      z-index: 1;
+      @include desktopHD {
+        margin-top: 477px;
+      }
+      @include tabletHD {
+        margin-top: 361px;
+      }
+      @include tabletSD {
+        margin-top: 489px;
+      }
+      @include mobile {
+        padding: 0px 170px;
+        margin-top: 231px;
+      }
+    }
+    img {
+      @include desktopHD {
+        margin-top: 100px;
+        transform: scale(1.25);
+      }
+      @include tabletHD {
+        margin-top: -15px;
+        transform: scale(0.96);
+      }
+      @include tabletSD {
+        margin-top: 111px;
+        transform: scale(1.28);
+      }
+      @include mobile {
+        margin-top: -100px;
+        transform: scale(0.75);
+      }
+    }
+    &__btn-scroll-block {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+      position: absolute;
+      bottom: 0px;
+    }
+    &__btn-scroll {
+      transition: 0.2s;
+      svg {
+        g {
+          circle {
+            transition: 0.2s;
+          }
+          path {
+            transition: 0.2s;
+          }
+        }
+      }
+      &:hover {
+        svg {
+          g {
+            circle {
+              stroke: $accent-regular;
+            }
+            path {
+              stroke: $accent-regular;
+            }
+          }
+        }
+      }
+    }
+  }
+}
