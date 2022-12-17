@@ -1,7 +1,7 @@
 .sec-two-block {
   display: flex;
   align-items: flex-end;
-  padding: 1px 60px 53px;
+  padding: 50px 60px 53px;
 
   &__info {
     width: 100%;
@@ -99,9 +99,9 @@
     }
   }
   @include desktopHD {
-    padding: 1px 160px 53px;
+    padding: 50px 160px 53px;
   }
   @include mobile {
-    padding: 1px 30px 21px;
+    padding: 30px 30px 21px;
   }
 }
