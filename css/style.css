@@ -14,6 +14,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  scroll-behavior: smooth;
 }
 
 /* Sections
@@ -1493,125 +1494,90 @@ input:invalid {
   }
 }
 
+.symbol-block__h1-mobile {
+  display: none;
+  z-index: 2;
+  width: 800px;
+  position: absolute;
+  left: calc(50% - 400px);
+}
+@media screen and (max-width: 767px) {
+  .symbol-block__h1-mobile {
+    display: block;
+    width: 146px;
+    top: 10px;
+    left: 35%;
+    top: 383px;
+  }
+}
+
 .sec-one-block {
   position: relative;
   display: flex;
   justify-content: center;
   padding: 0px 371px;
-  height: 799px;
   margin-bottom: 60px;
-}
-@media screen and (min-width: 1920px) {
-  .sec-one-block {
-    height: 999px;
-  }
-}
-@media screen and (max-width: 1457px) {
-  .sec-one-block {
-    height: 768px;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .sec-one-block {
-    height: 1024px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .sec-one-block {
-    height: 600px;
-    padding: 0px;
-    margin-bottom: 30px;
-  }
+  height: 100vh;
+  width: 100%;
 }
 .sec-one-block .symbol-block {
   position: relative;
-}
-.sec-one-block .symbol-block::before {
-  position: absolute;
-  display: block;
-  margin-top: 379px;
-  width: 100%;
-  content: "you legal solutions provider";
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  margin-top: 377px;
-  z-index: 1;
-}
-@media screen and (min-width: 1920px) {
-  .sec-one-block .symbol-block::before {
-    margin-top: 477px;
-  }
-}
-@media screen and (max-width: 1457px) {
-  .sec-one-block .symbol-block::before {
-    margin-top: 361px;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .sec-one-block .symbol-block::before {
-    margin-top: 489px;
-  }
 }
 @media screen and (max-width: 767px) {
-  .sec-one-block .symbol-block::before {
-    padding: 0px 170px;
-    margin-top: 231px;
+  .sec-one-block .symbol-block {
+    top: 0px;
+    left: 0px;
   }
 }
-@media screen and (min-width: 1920px) {
-  .sec-one-block .symbol-block img {
-    margin-top: 100px;
-    transform: scale(1.25);
-  }
-}
-@media screen and (max-width: 1457px) {
-  .sec-one-block .symbol-block img {
-    margin-top: -15px;
-    transform: scale(0.96);
-  }
-}
-@media screen and (max-width: 1023px) {
-  .sec-one-block .symbol-block img {
-    margin-top: 111px;
-    transform: scale(1.28);
-  }
+.sec-one-block .symbol-block__h1 {
+  display: block;
+  width: 800px;
+  position: absolute;
+  left: calc(50% - 400px);
+  top: calc(50% - 23px);
 }
 @media screen and (max-width: 767px) {
-  .sec-one-block .symbol-block img {
-    margin-top: -100px;
-    transform: scale(0.75);
+  .sec-one-block .symbol-block__h1 {
+    display: none;
   }
 }
-.sec-one-block .symbol-block__btn-scroll-block {
+.sec-one-block .symbol-block img {
+  height: 100vh;
+}
+
+.btn-scroll-block {
+  z-index: 2;
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 20px;
-  position: absolute;
-  bottom: 0px;
+  position: relative;
+  bottom: 45px;
+  left: 0px;
+  bottom: 169px;
 }
-.sec-one-block .symbol-block__btn-scroll {
+.btn-scroll-block .btn-scroll {
   transition: 0.2s;
 }
-.sec-one-block .symbol-block__btn-scroll svg g circle {
+.btn-scroll-block .btn-scroll svg g circle {
   transition: 0.2s;
 }
-.sec-one-block .symbol-block__btn-scroll svg g path {
+.btn-scroll-block .btn-scroll svg g path {
   transition: 0.2s;
 }
-.sec-one-block .symbol-block__btn-scroll:hover svg g circle {
+.btn-scroll-block .btn-scroll:hover svg g circle {
   stroke: #f0145a;
 }
-.sec-one-block .symbol-block__btn-scroll:hover svg g path {
+.btn-scroll-block .btn-scroll:hover svg g path {
   stroke: #f0145a;
 }
 
 .sec-two-block {
   display: flex;
   align-items: flex-end;
-  padding: 1px 60px 53px;
+  padding: 50px 60px 53px;
 }
 .sec-two-block__info {
   width: 100%;
@@ -1728,12 +1694,12 @@ input:invalid {
 }
 @media screen and (min-width: 1920px) {
   .sec-two-block {
-    padding: 1px 160px 53px;
+    padding: 50px 160px 53px;
   }
 }
 @media screen and (max-width: 767px) {
   .sec-two-block {
-    padding: 1px 30px 21px;
+    padding: 30px 30px 21px;
   }
 }
 
